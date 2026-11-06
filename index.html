@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of a web developer.">
+  <title>Portfolio Nagima </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="На главную"><span class="brand-mark">✳</span></a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a class="nav-link active" href="#about">ABOUT</a>
+      <a class="nav-link" href="#work">PORTFOLIO</a>
+      <a class="nav-link" href="#contact">CONTACT</a>
+    </nav>
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <button class="icon-button theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Сменить тему">☼</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <a href="#about">ABOUT</a><a href="#work">PORTFOLIO</a><a href="#contact">CONTACT</a>
+  </nav>
+
+  <main id="home">
+    <section class="hero panel" id="about">
+      <div class="hero-top">
+        <span>web developer</span>
+        <span class="availability"><i></i> AVAILABLE FOR JOB</span>
+      </div>
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">HELLO, I'M</p>
+          <h1>Nagima</h1>
+          <p class="intro">I develop digital products with<br class="desktop-break"> great experience.</p>
+          <div class="actions">
+            <a class="button primary" href="#contact">Hire me <span>＋</span></a>
+            <button class="button secondary" id="copyEmail">Copy Email <span class="copy-icon">▢</span></button>
+          </div>
+          <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
+        </div>
+      <div class="avatar-wrap">
+  <img src="WhatsApp Image 2026-11-05 at 19.13.17.jpeg" alt="Nagima" class="avatar">
+</div>
+    </section>
+
+    <section class="portfolio-grid" id="work">
+      <div class="panel recent-panel">
+        <div class="section-heading"><span class="dot"></span><h2>Recent Work</h2></div>
+        <div class="work-list">
+          <article class="job"><div><h3>Web Developer</h3><p>2023 - Present</p></div><span>JavaScript</span></article>
+          <article class="job"><div><h3>Frontend Developer</h3><p>2021 - 2022</p></div><span>React</span></article>
+          <article class="job"><div><h3>Web Developer</h3><p>2023 - Present</p></div><span>JavaScript</span></article>
+          <article class="job"><div><h3>Web Developer</h3><p>2023 - Present</p></div><span>JavaScript</span></article>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="category-grid" aria-label="Фильтр проектов">
+          <button class="category category-wide active" data-filter="all">Product design</button>
+          <button class="category" data-filter="ux">User Experience</button>
+          <button class="category" data-filter="nocode">NoCode develop</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card phone-card" data-category="ux" data-title="iOS Mobile app" data-description="Концепция мобильного приложения с простым и понятным пользовательским интерфейсом.">
+            <div class="project-title"><div><h3>iOS Mobile app</h3><p>Product develop</p></div><button class="open-project" aria-label="Подробнее">↗</button></div>
+            <div class="phone-mockup"><div class="phone-screen"><div class="phone-notch"></div></div></div>
+          </article>
+          <article class="project-card music-card" data-category="ux" data-title="AI Music product" data-description="UX case study: музыкальный продукт с подборками и персональными рекомендациями.">
+            <div class="project-title"><div><h3>AI Music product</h3><p>UX Case study</p></div><button class="open-project" aria-label="Подробнее">↗</button></div>
+            <div class="music-art">
+              <div class="music-sheet sheet-back"></div>
+              <div class="music-sheet sheet-front"><span class="music-label">♫</span><b>Discover<br>your sound</b><div class="album-row"><i>♫</i><i>♪</i><i>♬</i><i>♫</i></div></div>
+            </div>
+          </article>
+          <article class="project-card map-card" data-category="nocode" data-title="AI Map redesign" data-description="Редизайн карты: удобная навигация, карточки мест и более ясная визуальная иерархия.">
+            <div class="project-title"><div><h3>AI Map redesign</h3><p>UX Case study</p></div><button class="open-project" aria-label="Подробнее">↗</button></div>
+            <div class="map-art"><div class="map-lines"></div><span class="map-pin">●</span><span class="map-caption">Parked Car <small>10.1 km</small></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer panel" id="contact">
+    <span>Portfolio 2026</span>
+    <div class="social-links"><a href="https://twitter.com/" target="_blank" rel="noreferrer">Twitter</a><a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a><a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+    <a class="availability footer-availability" href="mailto:hello@example.com"><i></i> AVAILABLE FOR JOB</a>
+  </footer>
+
+  <dialog class="project-modal" id="projectModal">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+    <p class="eyebrow">PROJECT DETAILS</p><h2 id="modalTitle">Project</h2><p id="modalDescription"></p>
+    <a class="button primary" href="mailto:hello@example.com">Discuss project ↗</a>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
